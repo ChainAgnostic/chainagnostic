@@ -63,6 +63,16 @@ export default function NamespaceCaip(props: any) {
           </tr>
           <CaipsTr requires={caip.meta.requires} title={"Requires"} />
           <CaipsTr requires={caip.meta.replaces} title={"Replaces"} />
+          <tr>
+            <th>Source</th>
+            <td>
+              <a
+                href={`https://github.com/ChainAgnostic/namespaces/tree/main/${pageContext.namespace.name}/${caip.filename}`}
+              >
+                GitHub
+              </a>
+            </td>
+          </tr>
         </tbody>
       </table>
       <div dangerouslySetInnerHTML={{ __html: caip.markdowned }} />

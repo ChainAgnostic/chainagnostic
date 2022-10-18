@@ -3,22 +3,7 @@ import { graphql, HeadFC, HeadProps, Link, PageProps } from "gatsby";
 import { Layout } from "../../components/layout";
 import { Authors } from "../../components/authors";
 import { IsoDay } from "../../components/iso-day";
-
-function ReplacesCAIPs(props: { replaces: number[] }) {
-  const elements: any = [];
-  props.replaces.forEach((caipNumber, index) => {
-    elements.push(
-      <Link key={caipNumber} to={`/caips/${caipNumber}/`}>
-        CAIP-{caipNumber}
-      </Link>
-    );
-    if (index < props.replaces.length - 1) {
-      elements.push(", ");
-    }
-  });
-
-  return <>{elements}</>;
-}
+import { CaipsTr } from "../../components/caips-tr";
 
 function CaipsAvailableTable(props: { caips: any[] }) {
   const sorted = props.caips.sort((a, b) => a.caip - b.caip);
@@ -79,10 +64,15 @@ export function NamespaceNamePage(props: PageProps<any>) {
               <IsoDay date={data.readme.meta.updated} />
             </td>
           </tr>
+          <CaipsTr requires={data.readme.meta.replaces} title={"Replaces"} />
           <tr>
-            <th>Replaces</th>
+            <th>Source</th>
             <td>
-              <ReplacesCAIPs replaces={data.readme.meta.replaces} />
+              <a
+                href={`https://github.com/ChainAgnostic/namespaces/tree/main/${data.name}`}
+              >
+                GitHub
+              </a>
             </td>
           </tr>
         </tbody>

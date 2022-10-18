@@ -81,6 +81,7 @@ export async function sourceNodes(args: NodePluginArgs) {
         };
         caipsImplemented.push({
           caip: Number(match[1]),
+          filename: relativeFileInDir,
           meta: meta,
           markdowned: markdowned,
         });
@@ -150,6 +151,7 @@ export async function createPages(args: CreatePagesArgs) {
           caips {
             caip
             markdowned
+            filename
             meta {
               namespace_identifier
               title
