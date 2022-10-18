@@ -1,7 +1,9 @@
 import React, { PropsWithChildren } from "react";
-import { Link } from 'gatsby'
+import { Link } from "gatsby";
 // @ts-ignore
 import GithubIcon from "../assets/icons8-github-48.svg";
+// @ts-ignore
+import DiscordIcon from "../assets/icons8-discord.svg";
 
 export function Layout(props: PropsWithChildren) {
   return (
@@ -12,9 +14,13 @@ export function Layout(props: PropsWithChildren) {
             "mx-auto max-w-screen-md md:flex py-2 justify-between md:flex-wrap px-4 sm:px-0"
           }
         >
-          <div className={"text-2xl text-center text-neutral-600 flex justify-center flex-col"}>
+          <div
+            className={
+              "text-2xl text-center text-neutral-600 flex justify-center flex-col"
+            }
+          >
             <Link to={"/"} className={"normal-like"}>
-            Chain Agnostic Improvement Proposals
+              Chain Agnostic Improvement Proposals
             </Link>
           </div>
           <div className={"flex flex-nowrap gap-x-4 my-2 justify-center"}>
@@ -33,22 +39,37 @@ export function Layout(props: PropsWithChildren) {
       </div>
 
       <div className={"container mx-auto max-w-screen-md px-4 md:px-0"}>
-      {props.children}
+        {props.children}
       </div>
 
       <div className={"w-full border-t border-slate-200 mt-4"}>
         <div
           className={
-            "mx-auto max-w-screen-md md:flex py-2 justify-between md:flex-wrap px-4 md:px-0"
+            "mx-auto max-w-screen-md md:flex py-6 justify-between md:flex-wrap px-4 md:px-0"
           }
         >
-          <div>
+          <div className={"flex flex-col gap-y-2"}>
             <a
               href={"https://github.com/ChainAgnostic"}
-              className={"no-underline leading-8"}
+              className={"no-underline"}
             >
-              <GithubIcon width={"24"} className={"inline-block pb-0.5"} />{" "}
-              ChainAgnostic
+              <GithubIcon
+                width={"24"}
+                height={"24"}
+                className={"inline-block pb-0.5"}
+              />{" "}
+              GitHub
+            </a>
+            <a
+              href={"https://discord.gg/gRNngkwzSt"}
+              className={"no-underline"}
+            >
+              <DiscordIcon
+                width={"24"}
+                height={"24"}
+                className={"inline-block pb-0.5"}
+              />{" "}
+              Discord
             </a>
           </div>
           <div className={"max-w-lg text-gray-400"}>
