@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "../components/layout";
-import { Link } from "gatsby";
+import { HeadFC, HeadProps, Link } from "gatsby";
 import { Authors } from "../components/authors";
 import { Discussions } from "../components/discussions";
 import { IsoDay } from "../components/iso-day";
@@ -69,3 +69,11 @@ export default function NamespaceCaip(props: any) {
     </Layout>
   );
 }
+
+export const Head: HeadFC = (props: HeadProps<any, any>) => {
+  return (
+    <title>
+      {props.pageContext.caip.meta.title} | Chain Agnostic Improvement Proposals
+    </title>
+  );
+};
