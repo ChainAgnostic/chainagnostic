@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  @apply text-sky-600 underline;
+}
+
+a.normal-like {
+  @apply no-underline text-black;
+}
+a.normal-like:hover {
+  @apply underline;
+}
+
+a.ordinary {
+  @apply text-inherit no-underline;
+}
+
+.menu-item {
+  @apply text-inherit no-underline;
+}
+
+.menu-item:hover {
+  @apply underline;
+}
+
+table {
+  @apply border-collapse border border-neutral-300 w-full;
+}
+
+table.caips-table .number {
+  @apply w-1 text-center;
+}
+
+table.caips-table .author {
+  @apply w-1/4;
+}
+
+table td,
+th {
+  @apply border-neutral-300 border p-2;
+}
+
+table th {
+  @apply bg-neutral-200;
+}
+
+table th {
+  @apply border-r-neutral-400 text-left;
+}
+
+table thead th {
+  @apply border-b-neutral-400 border-r-0 text-center;
+}
+
+table tr {
+  @apply even:bg-neutral-100;
+}
+
+h1 {
+  @apply text-3xl pb-3 py-5;
+}
+
+h2 {
+  @apply text-2xl pb-2 py-4;
+}
+
+h3 {
+  @apply text-xl pb-2 py-3;
+}
+
+h4 {
+  @apply text-lg py-2;
+}
+
+code {
+  @apply font-mono bg-purple-100 px-1 border border-gray-300 rounded-sm;
+}
+
+pre {
+  @apply font-mono bg-purple-100 p-2 my-1 border border-gray-300 rounded-sm overflow-x-auto;
+}
+
+pre code {
+  @apply bg-none p-0 border-0;
+}
+
+ul,
+ol {
+  @apply list-disc list-inside py-2 pl-4;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+ul > li > ul,
+ol > li > ol {
+  @apply py-0;
+}
+
+p {
+  @apply pb-2 pt-1;
+}
+
+th.vertical {
+  transform: rotate(270deg);
+  transform-origin: 0 0;
+}

@@ -1,0 +1,48 @@
+{
+  "name": "caiplist",
+  "version": "1.0.0",
+  "private": true,
+  "description": "caiplist",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mdx-js/react": "^1.6.22",
+    "@theme-ui/mdx": "^0.15.1",
+    "gatsby": "^4.24.4",
+    "gatsby-plugin-react-svg": "^3.1.0",
+    "gatsby-plugin-theme-ui": "^0.15.2-canary.1",
+    "gray-matter": "^4.0.3",
+    "prettier": "^2.7.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.2",
+    "remark-toc": "^7.2.0",
+    "remark-slug": "^6.1.0",
+    "remark-gfm": "^1.0.0",
+    "remark-autolink-headings": "^6.1.0",
+    "theme-ui": "^0.15.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.45",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.12",
+    "esm": "^3.2.25",
+    "gatsby-plugin-postcss": "^5.24.0",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.8.3"
+  }
+}
